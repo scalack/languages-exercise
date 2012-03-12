@@ -15,3 +15,9 @@ def main(offset=6):
 
  
 main(6) 
+
+
+###reduce 函数
+s = xrange(100)
+
+s = reduce(lambda x,y:x**y,s)
