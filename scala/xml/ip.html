@@ -1,0 +1,26 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <title>IP库</title>
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+
+<script>
+	$(document).ready(function() {
+		$.get('http://www.ip168.com/include/ip.php', function(data) {
+			var arr = data.split(',');
+
+			$('#ip_address').html(arr[2]);
+            $('#ip').html(arr[1]);
+		});
+	});
+</script>
+
+<body>
+
+<p>您的IP地址是：[<span id="ip"></span>] 来自：<span id="ip_address">查询中...</span></p>
+
+</body>
+</html>
